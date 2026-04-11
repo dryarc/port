@@ -16,46 +16,48 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#home" class="nav-brand">dry<span></span></a>
+    <a href="#home" class="nav-brand">dry<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#sobre">sobre</a></li>
-      <li><a href="#skills">skills</a></li>
-      <li><a href="#projetos">projetos</a></li>
-      <li><a href="#contato">contato</a></li>
+      <li><a href="#sobre" data-pt="sobre" data-en="about">sobre</a></li>
+      <li><a href="#skills" data-pt="skills" data-en="skills">skills</a></li>
+      <li><a href="#projetos" data-pt="projetos" data-en="projects">projetos</a></li>
+      <li><a href="#contato" data-pt="contato" data-en="contact">contato</a></li>
     </ul>
+    <button class="lang-toggle" id="lang-toggle">EN</button>
     <button class="burger" id="burger"><span></span><span></span></button>
   </nav>
 
   <div class="mob-menu" id="mob-menu">
-    <a href="#sobre" class="ml">Sobre</a>
-    <a href="#skills" class="ml">Skills</a>
-    <a href="#projetos" class="ml">Projetos</a>
-    <a href="#contato" class="ml">Contato</a>
+    <a href="#sobre" class="ml" data-pt="Sobre" data-en="About">Sobre</a>
+    <a href="#skills" class="ml" data-pt="Skills" data-en="Skills">Skills</a>
+    <a href="#projetos" class="ml" data-pt="Projetos" data-en="Projects">Projetos</a>
+    <a href="#contato" class="ml" data-pt="Contato" data-en="Contact">Contato</a>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-left">
-      <p class="pre reveal">disponível para projetos</p>
+      <p class="pre reveal" data-pt="disponível para projetos" data-en="available for projects">disponível para projetos</p>
       <h1 class="hero-name reveal">
         <span>dry</span><span class="dot-name">.</span><span>ARC</span>
       </h1>
       <p class="hero-role reveal">Desenvolvedor <em>Full‑Stack</em></p>
       <p class="hero-bio reveal">
-        Código limpo. Design intencional.<br/>2 anos construindo coisas que funcionam — e que são boas.
+        <span data-pt="Código limpo. Design intencional." data-en="Clean code. Intentional design.">Código limpo. Design intencional.</span><br/>
+        <span data-pt="2 anos construindo coisas que funcionam — e que são boas." data-en="2 years building things that work — and look good.">2 anos construindo coisas que funcionam — e que são boas.</span>
       </p>
       <div class="hero-actions reveal">
-        <a href="#projetos" class="btn">Ver projetos</a>
-        <a href="#contato" class="btn-line">Falar comigo</a>
+        <a href="#projetos" class="btn" data-pt="Ver projetos" data-en="View projects">Ver projetos</a>
+        <a href="#contato" class="btn-line" data-pt="Falar comigo" data-en="Talk to me">Falar comigo</a>
       </div>
       <div class="lang-badges reveal">
-        <span class="badge">🇧🇷 Português — Fluente</span>
-        <span class="badge">🇺🇸 English — Intermediário</span>
+        <span class="badge" data-pt="🇧🇷 Português — Fluente" data-en="🇧🇷 Portuguese — Fluent">🇧🇷 Português — Fluente</span>
+        <span class="badge" data-pt="🇺🇸 English — Intermediário" data-en="🇺🇸 English — Intermediate">🇺🇸 English — Intermediário</span>
       </div>
     </div>
     <div class="hero-right reveal">
       <div class="photo-wrap">
-        <img src="imagens/dry.png" alt="dry.arc" class="photo"/>
+        <img src="imagens/dry.png" alt="dry" class="photo"/>
         <div class="photo-ring"></div>
         <div class="photo-dot d1"></div>
         <div class="photo-dot d2"></div>
@@ -66,37 +68,37 @@
   <!-- SOBRE -->
   <section class="section" id="sobre">
     <div class="container">
-      <div class="label reveal">// sobre mim</div>
+      <div class="label reveal" data-pt="// sobre mim" data-en="// about me">// sobre mim</div>
       <div class="about-grid">
         <div class="about-text">
-          <h2 class="reveal">Olá, eu sou <strong>dry</strong> —<br/>desenvolvedor apaixonado por código.</h2>
+          <h2 class="reveal">
+            <span data-pt="Olá, eu sou" data-en="Hey, I'm">Olá, eu sou</span> <strong>dry</strong> —<br/>
+            <span data-pt="desenvolvedor apaixonado por código." data-en="a developer passionate about code.">desenvolvedor apaixonado por código.</span>
+          </h2>
           <p class="reveal">
-            Com <strong>2 anos de carreira</strong>, já desenvolvi <strong>3 projetos</strong> completos, desde a ideia até a entrega. 
-            Gosto de resolver problemas reais com soluções e técnicas elegantes.
+            Com <strong>2 anos de carreira</strong>, <span data-pt="já desenvolvi" data-en="I have developed">já desenvolvi</span> <strong>3 projetos</strong> <span data-pt="completos, desde a ideia até a entrega. Gosto de resolver problemas reais com soluções e técnicas elegantes." data-en="complete projects, from idea to delivery. I enjoy solving real problems with elegant technical solutions.">completos, desde a ideia até a entrega. Gosto de resolver problemas reais com soluções e técnicas elegantes.</span>
           </p>
           <p class="reveal">
-            Sou fluente em <strong>Português</strong> e estou aprendendo <strong>Inglês</strong> — 
-            já me comunico bem por escrito e continuo evoluindo.
+            <span data-pt="Sou fluente em" data-en="I'm fluent in">Sou fluente em</span> <strong>Português</strong> <span data-pt="e estou aprendendo" data-en="and learning">e estou aprendendo</span> <strong>Inglês</strong> — <span data-pt="já me comunico bem por escrito e continuo evoluindo." data-en="I already communicate well in writing and keep improving.">já me comunico bem por escrito e continuo evoluindo.</span>
           </p>
           <p class="reveal">
-            Me encontro principalmente no Discord e no GitHub (<strong>dry.arc</strong>), 
-            que é um ótimo canal pra conectar com outros devs e colaborar em projetos.
+            <span data-pt="Me encontro principalmente no Discord e no GitHub" data-en="You can find me mainly on Discord and GitHub">Me encontro principalmente no Discord e no GitHub</span> (<strong>dry.arc</strong>), <span data-pt="ótimos canais pra conectar com outros devs e colaborar em projetos." data-en="great places to connect with other devs and collaborate on projects.">ótimos canais pra conectar com outros devs e colaborar em projetos.</span>
           </p>
         </div>
         <div class="about-stats reveal">
           <div class="stat-card">
             <span class="stat-n" data-target="2">0</span>
-            <span class="stat-u">anos</span>
-            <span class="stat-l">de carreira</span>
+            <span class="stat-u" data-pt="anos" data-en="years">anos</span>
+            <span class="stat-l" data-pt="de carreira" data-en="of career">de carreira</span>
           </div>
           <div class="stat-card">
             <span class="stat-n" data-target="3">0</span>
-            <span class="stat-u">projetos</span>
-            <span class="stat-l">entregues</span>
+            <span class="stat-u" data-pt="projetos" data-en="projects">projetos</span>
+            <span class="stat-l" data-pt="entregues" data-en="delivered">entregues</span>
           </div>
           <div class="stat-card">
             <span class="stat-n" data-target="2">0</span>
-            <span class="stat-u">idiomas</span>
+            <span class="stat-u" data-pt="idiomas" data-en="languages">idiomas</span>
             <span class="stat-l">PT + EN</span>
           </div>
         </div>
@@ -107,8 +109,8 @@
   <!-- SKILLS -->
   <section class="section s-alt" id="skills">
     <div class="container">
-      <div class="label reveal">// habilidades</div>
-      <h2 class="sec-title reveal">O que eu sei fazer.</h2>
+      <div class="label reveal" data-pt="// habilidades" data-en="// skills">// habilidades</div>
+      <h2 class="sec-title reveal" data-pt="O que eu sei fazer." data-en="What I can do.">O que eu sei fazer.</h2>
       <div class="skills-wrap">
 
         <div class="sk-card reveal">
@@ -116,7 +118,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             <h3>Front-End</h3>
           </div>
-          <p>Interfaces responsivas, animações e componentes reutilizáveis com foco em UX.</p>
+          <p data-pt="Interfaces responsivas, animações e componentes reutilizáveis com foco em UX." data-en="Responsive interfaces, animations and reusable components focused on UX.">Interfaces responsivas, animações e componentes reutilizáveis com foco em UX.</p>
           <div class="sk-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
         </div>
 
@@ -125,7 +127,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             <h3>Back-End</h3>
           </div>
-          <p>APIs, lógica de negócio, bancos de dados e integrações entre sistemas.</p>
+          <p data-pt="APIs, lógica de negócio, bancos de dados e integrações entre sistemas." data-en="APIs, business logic, databases and system integrations.">APIs, lógica de negócio, bancos de dados e integrações entre sistemas.</p>
           <div class="sk-tags"><span>Node.js</span><span>Python</span><span>SQL</span><span>REST</span></div>
         </div>
 
@@ -134,7 +136,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             <h3>Ferramentas</h3>
           </div>
-          <p>Versionamento, organização de projetos e deploy de aplicações.</p>
+          <p data-pt="Versionamento, organização de projetos e deploy de aplicações." data-en="Version control, project organization and application deployment.">Versionamento, organização de projetos e deploy de aplicações.</p>
           <div class="sk-tags"><span>Git</span><span>GitHub</span><span>VSCode</span><span>Linux</span></div>
         </div>
 
@@ -143,7 +145,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <h3>Idiomas</h3>
           </div>
-          <p>Comunicação clara e eficiente, tanto em projetos locais quanto internacionais.</p>
+          <p data-pt="Comunicação clara e eficiente, tanto em projetos locais quanto internacionais." data-en="Clear and efficient communication, for both local and international projects.">Comunicação clara e eficiente, tanto em projetos locais quanto internacionais.</p>
           <div class="sk-tags"><span>PT — Fluente</span><span>EN — Intermediário</span></div>
         </div>
 
@@ -154,37 +156,26 @@
   <!-- PROJETOS -->
   <section class="section" id="projetos">
     <div class="container">
-      <div class="label reveal">// projetos</div>
-      <h2 class="sec-title reveal">O que já construí.</h2>
+      <div class="label reveal" data-pt="// projetos" data-en="// projects">// projetos</div>
+      <h2 class="sec-title reveal" data-pt="O que já construí." data-en="What I've built.">O que já construí.</h2>
       <div class="proj-grid">
 
         <div class="proj-card reveal">
           <div class="proj-num">01</div>
-          <h3>Nome do Projeto</h3>
-          <p>Descrição do projeto. O que ele resolve, como foi construído e o resultado final.</p>
-          <div class="proj-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+          <h3>Landing Page</h3>
+          <p data-pt="Desenvolvimento de uma landing page para uma marca de moda com foco em transmitir identidade e sofisticação logo no primeiro contato. Construída com HTML e CSS, priorizando tipografia elegante, cores contrastantes e um layout imersivo que comunica uma estética premium." data-en="Development of a landing page for a fashion brand focused on conveying identity and sophistication at first contact. Built with HTML and CSS, prioritizing elegant typography, contrasting colors and an immersive layout that communicates a premium aesthetic.">Desenvolvimento de uma landing page para uma marca de moda com foco em transmitir identidade e sofisticação logo no primeiro contato. Construída com HTML e CSS, priorizando tipografia elegante, cores contrastantes e um layout imersivo que comunica uma estética premium.</p>
+          <div class="proj-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
           <div class="proj-links">
             <a href="https://github.com/dryarc" target="_blank">GitHub ↗</a>
-            <a href="#">Demo ↗</a>
+            <a href="projects/index landing pagre.html" target="_blank">Demo ↗</a>
           </div>
         </div>
 
         <div class="proj-card reveal">
           <div class="proj-num">02</div>
           <h3>Segundo Projeto</h3>
-          <p>Descrição do projeto. Destaque a solução técnica, o stack utilizado e o impacto gerado.</p>
+          <p data-pt="Descrição do projeto. Destaque a solução técnica, o stack utilizado e o impacto gerado." data-en="Project description. Highlight the technical solution, the stack used and the impact generated.">Descrição do projeto. Destaque a solução técnica, o stack utilizado e o impacto gerado.</p>
           <div class="proj-tech"><span>Python</span><span>PostgreSQL</span><span>Docker</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/dryarc" target="_blank">GitHub ↗</a>
-            <a href="#">Demo ↗</a>
-          </div>
-        </div>
-
-        <div class="proj-card reveal">
-          <div class="proj-num">03</div>
-          <h3>Terceiro Projeto</h3>
-          <p>Descrição do projeto. Conte sobre os desafios enfrentados e como os superou.</p>
-          <div class="proj-tech"><span>TypeScript</span><span>Next.js</span><span>AWS</span></div>
           <div class="proj-links">
             <a href="https://github.com/dryarc" target="_blank">GitHub ↗</a>
             <a href="#">Demo ↗</a>
@@ -198,48 +189,46 @@
   <!-- CONTATO -->
   <section class="section s-alt" id="contato">
     <div class="container">
-      <div class="label reveal">// contato</div>
-      <h2 class="sec-title reveal">Bora conversar?</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p class="reveal">Seja para um projeto, freela ou só bater um papo sobre tech — me chama. Respondo rápido.</p>
-          <div class="contact-links reveal">
-            <a href="https://github.com/dryarc" target="_blank" rel="noopener" class="clink">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              github.com/dryarc
-            </a>
-            <div class="clink discord-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-              dry.arc
+      <div class="label reveal" data-pt="// contato" data-en="// contact">// contato</div>
+      <h2 class="sec-title reveal" data-pt="Bora conversar?" data-en="Let's talk?">Bora conversar?</h2>
+      <div class="contact-simple reveal">
+        <p data-pt="Seja para um projeto, freela ou só bater um papo sobre tech — me chama. Respondo rápido." data-en="Whether for a project, freelance work or just a tech chat — hit me up. I reply fast.">Seja para um projeto, freela ou só bater um papo sobre tech — me chama. Respondo rápido.</p>
+        <div class="contact-cards">
+
+          <a href="https://github.com/dryarc" target="_blank" rel="noopener" class="contact-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <div>
+              <span class="cc-label">GitHub</span>
+              <span class="cc-value">github.com/dryarc</span>
             </div>
-            <a href="mailto:tiagoguilhermedasilva07@gmail.com" class="clink">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              tiagoguilhermedasilva07@gmail.com
-            </a>
+            <span class="cc-arrow">↗</span>
+          </a>
+
+          <div class="contact-card">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#5865F2"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            <div>
+              <span class="cc-label">Discord</span>
+              <span class="cc-value">dry.arc</span>
+            </div>
           </div>
+
+          <a href="mailto:tiagoguilhermedasilva07@gmail.com" class="contact-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <span class="cc-label">E-mail</span>
+              <span class="cc-value">tiagoguilhermedasilva07@gmail.com</span>
+            </div>
+            <span class="cc-arrow">↗</span>
+          </a>
+
         </div>
-        <form class="contact-form reveal" id="cform">
-          <div class="fg">
-            <label>Nome</label>
-            <input type="text" placeholder="Seu nome" required/>
-          </div>
-          <div class="fg">
-            <label>E-mail</label>
-            <input type="email" placeholder="seu@email.com" required/>
-          </div>
-          <div class="fg">
-            <label>Mensagem</label>
-            <textarea rows="5" placeholder="Sobre o que você quer falar?" required></textarea>
-          </div>
-          <button type="submit" class="btn full">Enviar mensagem</button>
-        </form>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <p>dry · <span id="year"></span> · feito com foco e café ☕</p>
+      <p>dry · <span id="year"></span> · <span data-pt="feito com foco e café ☕" data-en="made with focus and coffee ☕">feito com foco e café ☕</span></p>
     </div>
   </footer>
 

@@ -80,3 +80,55 @@ document.getElementById('cform').addEventListener('submit', e => {
     }, 3000);
   }, 1200);
 });
+
+// ================================
+// LANG TOGGLE — PT / EN
+// ================================
+const langBtn = document.getElementById('lang-toggle');
+let currentLang = 'pt';
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-pt]').forEach(el => {
+    el.textContent = lang === 'en' ? el.dataset.en : el.dataset.pt;
+  });
+  // skill cards descriptions (not data-pt tagged, done manually)
+  const skillDescs = {
+    pt: [
+      'Interfaces responsivas, animações e componentes reutilizáveis com foco em UX.',
+      'APIs, lógica de negócio, bancos de dados e integrações entre sistemas.',
+      'Versionamento, organização de projetos e deploy de aplicações.',
+      'Comunicação clara e eficiente, tanto em projetos locais quanto internacionais.'
+    ],
+    en: [
+      'Responsive interfaces, animations and reusable components focused on UX.',
+      'APIs, business logic, databases and system integrations.',
+      'Version control, project organization and application deployment.',
+      'Clear and efficient communication, for both local and international projects.'
+    ]
+  };
+  document.querySelectorAll('.sk-card p').forEach((p, i) => {
+    p.textContent = skillDescs[lang][i] ?? p.textContent;
+  });
+
+  // project desc for proj 02 (proj 01 has real content, keep it)
+  const proj2desc = document.querySelectorAll('.proj-card p')[1];
+  if (proj2desc) {
+    proj2desc.textContent = lang === 'en'
+      ? 'Project description. Highlight the technical solution, the stack used and the impact generated.'
+      : 'Descrição do projeto. Destaque a solução técnica, o stack utilizado e o impacto gerado.';
+  }
+
+  // contact card labels
+  const ccLabels = {
+    pt: ['GitHub', 'Discord', 'E-mail'],
+    en: ['GitHub', 'Discord', 'E-mail']
+  };
+
+  langBtn.textContent = lang === 'en' ? 'PT' : 'EN';
+  langBtn.classList.toggle('active', lang === 'en');
+  currentLang = lang;
+}
+
+langBtn.addEventListener('click', () => {
+  applyLang(currentLang === 'pt' ? 'en' : 'pt');
+});
