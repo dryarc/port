@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sailor Piece — Massive Update</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     VIDEO MODAL
+════════════════════════════════════════════ -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <video id="modalVideo" controls playsinline></video>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     HERO
+     Background: sailor_cover.png (game cover art)
+════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img class="hero-cover" src="sailor_cover.png" alt="Sailor Piece" />
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay-left"></div>
+  </div>
+  <div class="wrap hero-content">
+    <div class="hero-tag">Sailor Piece &nbsp;/&nbsp; Patch Notes</div>
+    <h1 class="hero-title">Massive<br /><span class="accent-word">Update</span></h1>
+    <div class="hero-meta">
+      <span class="hero-date">2025</span>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">New weapons, a new gamemode, expanded islands, and a long list of quality-of-life improvements.</p>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     STATS BAR
+════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-label">New Swords</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">New Islands</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">60</span>
+        <span class="stat-label">Rune Level Cap</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">35</span>
+        <span class="stat-label">Conqueror Haki Cap</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="wrap">
+
+  <!-- ── NEW CONTENT ── -->
+  <div class="section reveal">
+    <div class="section-header">
+      <h2 class="section-title">New Content</h2>
+      <span class="section-count">18 additions</span>
+    </div>
+
+    <!-- INFINITE TOWER — featured block with interior image -->
+    <div class="tower-feature reveal">
+      <div class="tower-visual">
+        <img src="infinite_tower_interior.png" alt="Infinite Tower Interior" />
+        <div class="tower-visual-overlay"></div>
+        <span class="tower-visual-label">New Gamemode</span>
+      </div>
+      <div class="tower-header">
+        <div class="tower-title">Infinite Tower</div>
+        <p class="tower-sub">A new endless gamemode — every floor is a boss encounter. Debuffs stack with altitude. Only the best will claim a spot on the global leaderboard.</p>
+        <div class="entry-badges" style="margin-top:12px;">
+          <span class="badge badge-purple">New Gamemode</span>
+          <span class="badge badge-gold">Leaderboard</span>
+          <span class="badge badge-cyan">New Island</span>
+          <span class="badge badge-cyan">Tower Shop</span>
+          <span class="badge badge-cyan">Upgrade Shop</span>
+        </div>
+      </div>
+      <div class="tower-floors">
+        <div class="floor-tier">
+          <span class="floor-range">F1 – 50</span>
+          <div class="floor-label">Standard</div>
+          <p class="floor-desc">One random debuff every 5 floors.</p>
+        </div>
+        <div class="floor-tier">
+          <span class="floor-range">F51 – 100</span>
+          <div class="floor-label">Elevated</div>
+          <p class="floor-desc">Two simultaneous random debuffs per tier floor.</p>
+        </div>
+        <div class="floor-tier">
+          <span class="floor-range">F100+</span>
+          <div class="floor-label">Apex</div>
+          <p class="floor-desc">Three stacked debuffs — endgame territory.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep reveal">
+      <div class="sep-line"></div>
+      <span class="sep-label">Weapons</span>
+      <div class="sep-line"></div>
+    </div>
+
+    <!-- ABYSSAL EMPRESS -->
+    <div class="entry-featured reveal">
+      <div class="entry-inner">
+        <div class="entry-index">01</div>
+        <div class="entry-body">
+          <div class="entry-title">Abyssal Empress — Sword</div>
+          <p class="entry-desc">New sword joining the roster with its own unique moveset and visual identity. A high-tier addition for sword mains.</p>
+          <div class="entry-badges">
+            <span class="badge badge-purple">New Sword</span>
+          </div>
+        </div>
+      </div>
+      <div class="entry-media" onclick="openModal('abyssal_empress_move.mp4')">
+        <video src="videos/abyssal empress move.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="white"><path d="M1 1l12 7L1 15V1z"/></svg>
+          </div>
+          <span class="video-label">Move Preview</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRONGEST SHINOBI -->
+    <div class="entry-featured reveal">
+      <div class="entry-inner">
+        <div class="entry-index">02</div>
+        <div class="entry-body">
+          <div class="entry-title">Strongest Shinobi — Melee</div>
+          <p class="entry-desc">A brand-new melee weapon with a dedicated moveset built for close-quarters combat.</p>
+          <div class="entry-badges">
+            <span class="badge badge-purple">New Melee</span>
+          </div>
+        </div>
+      </div>
+      <div class="entry-media" onclick="openModal('strongest_shinobi_move.mp4')">
+        <video src="videos/strongest shinobi move.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="white"><path d="M1 1l12 7L1 15V1z"/></svg>
+          </div>
+          <span class="video-label">Move Preview</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CID -->
+    <div class="entry-featured reveal">
+      <div class="entry-inner">
+        <div class="entry-index">03</div>
+        <div class="entry-body">
+          <div class="entry-title">CID — Companion in Dungeon</div>
+          <p class="entry-desc">New companion skill showcase with unique visual effects and combat integration.</p>
+          <div class="entry-badges">
+            <span class="badge badge-purple">New Skill</span>
+          </div>
+        </div>
+      </div>
+      <div class="entry-media" onclick="openModal('cid_move.mp4')">
+        <video src="videos/cid move.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="white"><path d="M1 1l12 7L1 15V1z"/></svg>
+          </div>
+          <span class="video-label">Move Preview</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep reveal">
+      <div class="sep-line"></div>
+      <span class="sep-label">World</span>
+      <div class="sep-line"></div>
+    </div>
+
+    <!-- ISLANDS -->
+    <div class="entry reveal" style="margin-bottom:2px;">
+      <div class="entry-inner">
+        <div class="entry-index">04</div>
+        <div class="entry-body">
+          <div class="entry-title">3 New Islands</div>
+          <p class="entry-desc">Two open exploration islands housing new artifact-dropping NPCs, plus a dedicated Tower island with its own economy.</p>
+          <div class="entry-badges">
+            <span class="badge badge-cyan">New Island x2</span>
+            <span class="badge badge-purple">Tower Island</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="island-grid reveal">
+      <div class="island-card">
+        <img src="imagens/island1.png" alt="Island 1" />
+        <div class="island-label">Island — I</div>
+      </div>
+      <div class="island-card">
+        <img src="imagens/island2.png" alt="Island 2" />
+        <div class="island-label">Island — II</div>
+      </div>
+    </div>
+
+    <div class="sep reveal">
+      <div class="sep-line"></div>
+      <span class="sep-label">Drops &amp; Progression</span>
+      <div class="sep-line"></div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">05</div>
+        <div class="entry-body">
+          <div class="entry-title">2 New Secret Runes</div>
+          <p class="entry-desc">Exclusively obtainable from the Infinite Tower with a very low drop probability. No other acquisition method exists.</p>
+          <div class="entry-badges">
+            <span class="badge badge-gold">Ultra Rare</span>
+            <span class="badge badge-purple">Tower Only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">06</div>
+        <div class="entry-body">
+          <div class="entry-title">New Secret Trait</div>
+          <p class="entry-desc">A hidden trait with undisclosed acquisition conditions. Discover it yourself.</p>
+          <div class="entry-badges">
+            <span class="badge badge-gold">Secret</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">07</div>
+        <div class="entry-body">
+          <div class="entry-title">New Clan + New Race</div>
+          <p class="entry-desc">Expanded character foundation — one new clan and one new race added to the roster.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">08</div>
+        <div class="entry-body">
+          <div class="entry-title">3 New Accessories</div>
+          <p class="entry-desc">One can be obtained from the Tower or purchased directly at the Tower Shop.</p>
+          <div class="entry-badges">
+            <span class="badge badge-cyan">1 Tower Shop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">09</div>
+        <div class="entry-body">
+          <div class="entry-title">3 New Titles + 1 Luck Title</div>
+          <p class="entry-desc">Three achievement titles and a dedicated luck title for the most fortunate players.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">10</div>
+        <div class="entry-body">
+          <div class="entry-title">2 New Auras — incl. Purple Flare</div>
+          <p class="entry-desc">Purple Flare is exclusive to the Tower Shop and unavailable through any other means.</p>
+          <div class="entry-badges">
+            <span class="badge badge-purple">Purple Flare — Tower Shop Exclusive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">11</div>
+        <div class="entry-body">
+          <div class="entry-title">2 New Cosmetics</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">12</div>
+        <div class="entry-body">
+          <div class="entry-title">New Artifact Set</div>
+          <p class="entry-desc">Drops from NPCs on the two new exploration islands. New set bonuses and build paths open up.</p>
+          <div class="entry-badges">
+            <span class="badge badge-cyan">Island Drop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">13</div>
+        <div class="entry-body">
+          <div class="entry-title">Rune Level Cap raised to 60</div>
+          <p class="entry-desc">Previous cap has been lifted — continue investing into your rune progression.</p>
+          <div class="entry-badges">
+            <span class="badge badge-green">Cap Increase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry reveal">
+      <div class="entry-inner">
+        <div class="entry-index">14</div>
+        <div class="entry-body">
+          <div class="entry-title">Conqueror Haki Level Cap raised to 35</div>
+          <p class="entry-desc">Extended ceiling for Conqueror Haki — push further.</p>
+          <div class="entry-badges">
+            <span class="badge badge-green">Cap Increase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QOL SECTION ── -->
+  <div class="section reveal">
+    <div class="section-header">
+      <h2 class="section-title">Quality of Life</h2>
+      <span class="section-count">6 changes</span>
+    </div>
+
+    <div class="qol-grid">
+
+      <div class="qol-entry reveal">
+        <div class="qol-type buff">Addition</div>
+        <div class="qol-title">Auto Haki Settings Expanded</div>
+        <p class="qol-desc">Auto Haki, Observation Haki, and Conqueror Haki are now accessible directly within the Auto Skill settings panel.</p>
+      </div>
+
+      <div class="qol-entry reveal">
+        <div class="qol-type opt">Optimization</div>
+        <div class="qol-title">Soul Society Map Performance</div>
+        <p class="qol-desc">General optimization pass applied to the Soul Society map to reduce load and improve frame consistency.</p>
+      </div>
+
+      <div class="qol-entry reveal">
+        <div class="qol-type buff">Balance</div>
+        <div class="qol-title">Executioner Passive Buff</div>
+        <p class="qol-desc">The Executioner passive has received a slight buff to improve its effectiveness relative to the current meta.</p>
+      </div>
+
+      <div class="qol-entry reveal">
+        <div class="qol-type fix">Fix</div>
+        <div class="qol-title">Total Stats Display</div>
+        <p class="qol-desc">Non-global buff stats will no longer incorrectly appear in the total stats screen, eliminating misleading readouts.</p>
+      </div>
+
+      <div class="qol-entry reveal">
+        <div class="qol-type fix">Fix</div>
+        <div class="qol-title">Miscellaneous Bug Fixes</div>
+        <p class="qol-desc">Additional minor bugs across various systems have been resolved.</p>
+      </div>
+
+      <div class="qol-entry reveal">
+        <div class="qol-type change">Change</div>
+        <div class="qol-title">Content Name Updates</div>
+        <p class="qol-desc">Most spec, boss, and accessory names have been revised to ensure DMCA compliance going forward.</p>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="site-footer">
+      <div class="footer-brand">Sailor Piece</div>
+      <div class="footer-copy">Patch Notes &mdash; 2025</div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
