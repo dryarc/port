@@ -11,9 +11,10 @@
 </head>
 <body>
 
-<!-- ════════════════════════════════════════════
-     VIDEO MODAL
-════════════════════════════════════════════ -->
+<!-- PARTICLES CANVAS -->
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<!-- VIDEO MODAL -->
 <div class="modal-backdrop" id="modal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">&#x2715;</button>
@@ -21,10 +22,7 @@
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════
-     HERO
-     Background: sailor_cover.png (game cover art)
-════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
     <img class="hero-cover" src="sailor_cover.png" alt="Sailor Piece" />
@@ -45,45 +43,41 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════
-     STATS BAR
-════════════════════════════════════════════ -->
+<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="wrap">
     <div class="stats-grid">
       <div class="stat-item">
-        <span class="stat-num">2</span>
+        <span class="stat-num" data-target="2">0</span>
         <span class="stat-label">New Swords</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">3</span>
+        <span class="stat-num" data-target="3">0</span>
         <span class="stat-label">New Islands</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">60</span>
+        <span class="stat-num" data-target="60">0</span>
         <span class="stat-label">Rune Level Cap</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">35</span>
+        <span class="stat-num" data-target="35">0</span>
         <span class="stat-label">Conqueror Haki Cap</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════
-     MAIN CONTENT
-════════════════════════════════════════════ -->
+<!-- MAIN CONTENT -->
 <main class="wrap">
 
-  <!-- ── NEW CONTENT ── -->
+  <!-- NEW CONTENT -->
   <div class="section reveal">
     <div class="section-header">
       <h2 class="section-title">New Content</h2>
       <span class="section-count">18 additions</span>
     </div>
 
-    <!-- INFINITE TOWER — featured block with interior image -->
+    <!-- INFINITE TOWER -->
     <div class="tower-feature reveal">
       <div class="tower-visual">
         <img src="infinite_tower_interior.png" alt="Infinite Tower Interior" />
@@ -127,6 +121,7 @@
     </div>
 
     <!-- ABYSSAL EMPRESS -->
+    <!-- video src and openModal must use the SAME path -->
     <div class="entry-featured reveal">
       <div class="entry-inner">
         <div class="entry-index">01</div>
@@ -138,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="entry-media" onclick="openModal('abyssal_empress_move.mp4')">
+      <div class="entry-media" data-video="videos/abyssal empress move.mp4">
         <video src="videos/abyssal empress move.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay">
           <div class="play-btn">
@@ -161,7 +156,7 @@
           </div>
         </div>
       </div>
-      <div class="entry-media" onclick="openModal('strongest_shinobi_move.mp4')">
+      <div class="entry-media" data-video="videos/strongest shinobi move.mp4">
         <video src="videos/strongest shinobi move.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay">
           <div class="play-btn">
@@ -184,7 +179,7 @@
           </div>
         </div>
       </div>
-      <div class="entry-media" onclick="openModal('cid_move.mp4')">
+      <div class="entry-media" data-video="videos/cid move.mp4">
         <video src="videos/cid move.mp4" muted loop playsinline preload="metadata"></video>
         <div class="video-overlay">
           <div class="play-btn">
@@ -354,7 +349,7 @@
     </div>
   </div>
 
-  <!-- ── QOL SECTION ── -->
+  <!-- QOL SECTION -->
   <div class="section reveal">
     <div class="section-header">
       <h2 class="section-title">Quality of Life</h2>
@@ -404,9 +399,6 @@
 
 </main>
 
-<!-- ════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════ -->
 <footer>
   <div class="wrap">
     <div class="site-footer">

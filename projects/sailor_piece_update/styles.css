@@ -450,3 +450,249 @@ body::after {
   .hero-title     { font-size: 60px; }
   .tower-visual   { height: 180px; }
 }
+
+/* ═══════════════════════════════════════════════
+   ENHANCEMENTS — animations, particles, shimmer
+═══════════════════════════════════════════════ */
+
+/* ── Canvas particles (always behind everything) ── */
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Reveal: slide up with spring feel ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+              transform 0.55s cubic-bezier(0.22,1,0.36,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Section title underline wipe-in ── */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--cyan));
+  transition: width 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s;
+}
+
+.reveal.visible .section-title::after {
+  width: 100%;
+}
+
+/* ── Entry hover shimmer border ── */
+.entry.shimmer-active,
+.entry-featured.shimmer-active,
+.qol-entry.shimmer-active {
+  border-color: rgba(124,92,252,0.35);
+  box-shadow: 0 0 0 1px rgba(124,92,252,0.12), inset 0 0 24px rgba(124,92,252,0.04);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* ── Tower feature — accent left border on hover ── */
+.tower-feature {
+  transition: border-color 0.2s, box-shadow 0.3s;
+}
+
+.tower-feature:hover {
+  border-color: rgba(124,92,252,0.4);
+  box-shadow: -3px 0 0 0 var(--accent), 0 0 40px rgba(124,92,252,0.08);
+}
+
+/* ── Floor tier number pulse on hover ── */
+.floor-tier:hover .floor-range {
+  animation: floorPulse 0.4s ease;
+  color: var(--cyan);
+}
+
+@keyframes floorPulse {
+  0%   { transform: scale(1);    }
+  40%  { transform: scale(1.08); }
+  100% { transform: scale(1);    }
+}
+
+/* ── Badge shimmer ── */
+.badge {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ── Stat number glow on load ── */
+.stat-num {
+  transition: color 0.3s;
+  text-shadow: 0 0 32px rgba(124,92,252,0.0);
+  animation: statGlow 1.8s 0.8s ease forwards;
+}
+
+@keyframes statGlow {
+  0%   { text-shadow: 0 0 0px  rgba(124,92,252,0.0); }
+  50%  { text-shadow: 0 0 24px rgba(124,92,252,0.7); }
+  100% { text-shadow: 0 0 12px rgba(124,92,252,0.25); }
+}
+
+/* ── Island card scale + glow ── */
+.island-card {
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.35s;
+}
+
+.island-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(124,92,252,0.18);
+}
+
+/* ── Entry media — accent ring on hover ── */
+.entry-media {
+  transition: box-shadow 0.2s;
+}
+
+.entry-media:hover {
+  box-shadow: inset 0 0 0 1px rgba(124,92,252,0.4);
+}
+
+/* ── Play button pulse idle ── */
+.play-btn {
+  animation: playPulse 2.4s infinite ease-in-out;
+}
+
+@keyframes playPulse {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(124,92,252,0.0); }
+  50%       { box-shadow: 0 0 0 8px rgba(124,92,252,0.2); }
+}
+
+.entry-media:hover .play-btn {
+  animation: none;
+}
+
+/* ── QOL type label glow ── */
+.qol-type.buff   { text-shadow: 0 0 8px rgba(61,255,160,0.4);  }
+.qol-type.fix    { text-shadow: 0 0 8px rgba(0,212,255,0.4);   }
+.qol-type.opt    { text-shadow: 0 0 8px rgba(232,200,122,0.4); }
+.qol-type.change { text-shadow: 0 0 8px rgba(124,92,252,0.45); }
+
+/* ── Hero title shimmer sweep ── */
+.hero-title {
+  background: linear-gradient(
+    90deg,
+    var(--text-primary) 0%,
+    var(--text-primary) 40%,
+    rgba(240,238,255,0.6) 50%,
+    var(--text-primary) 60%,
+    var(--text-primary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 5s 1s linear infinite;
+}
+
+.hero-title .accent-word {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(124,92,252,0.7);
+  background: none;
+}
+
+@keyframes titleShimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* ── Scroll cue wiggle ── */
+.scroll-cue {
+  animation: scrollCueFade 1s 1.2s ease forwards,
+             scrollCueBob 2.5s 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollCueFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollCueBob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ── Modal open animation ── */
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  display: flex !important;
+  pointer-events: none;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-box {
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+
+.modal-backdrop.open .modal-box {
+  transform: scale(1) translateY(0);
+}
+
+/* ── Sep line animated wipe ── */
+.reveal.visible .sep-line {
+  animation: sepWipe 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@keyframes sepWipe {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+/* ── Tower visual scan line ── */
+.tower-visual::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, transparent 0%, rgba(124,92,252,0.06) 50%, transparent 100%);
+  animation: scanLine 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanLine {
+  0%   { top: -60%; }
+  100% { top: 120%;  }
+}
+
+/* ── Entry appear: slight horizontal slide for alternating ── */
+.entry-featured:nth-child(odd).visible {
+  animation: slideFromLeft 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+
+.entry-featured:nth-child(even).visible {
+  animation: slideFromRight 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+
+@keyframes slideFromLeft  { from { transform: translateX(-12px); } to { transform: translateX(0); } }
+@keyframes slideFromRight { from { transform: translateX(12px);  } to { transform: translateX(0); } }
