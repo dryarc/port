@@ -139,7 +139,9 @@ body:has(button:hover) .cursor-ring { width: 52px; height: 52px; border-color: r
 .sk-tags span { font-family: var(--font-mono); font-size: .67rem; padding: .2rem .55rem; background: rgba(56,189,248,.06); border: 1px solid rgba(56,189,248,.14); border-radius: 3px; color: var(--accent); letter-spacing: .06em; }
 
 /* ---- PROJETOS ---- */
-.proj-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; }
+.proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .proj-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .proj-grid { grid-template-columns: 1fr; } }
 .proj-card  { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2rem; transition: border-color .3s, transform .3s; }
 .proj-card:hover { border-color: rgba(56,189,248,.25); transform: translateY(-4px); }
 .proj-num  { font-family: var(--font-head); font-size: 4rem; color: rgba(56,189,248,.12); line-height: 1; margin-bottom: .5rem; }
